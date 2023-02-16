@@ -1,5 +1,3 @@
-# seems to be working ok. I created the next file to add "undo/redo" and the choice to play as white or black.
-
 import pygame
 import os
 import chess
@@ -23,9 +21,7 @@ piece_images = {}
 file_location = os.path.dirname(os.path.abspath(__file__))
 for color in ("b", "w"):
     for piece_type in ("k", "q", "r", "n", "b", "p"):
-        # image_path = os.path.join("pieces", f"{color}{piece_type}.png")
         image_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pieces", f"{color}{piece_type}.png")
-        # image_path = os.path.join(file_location, f"pieces\{color}{piece_type()}.png")
         piece_images[(color, piece_type)] = pygame.image.load(image_path)
 
 # Draw the Chess board
@@ -37,7 +33,6 @@ def draw_board():
                 square_color = (240, 217, 181)
             else:
                 square_color = (181, 136, 99)
-            # pygame.draw.rect(screen, square_color, (col * 80, row * 80, 80, 80))
             pygame.draw.rect(screen, square_color, (col * 80, row * 80, 80, 80))
     # Draw the pieces
     for row in range(8):
