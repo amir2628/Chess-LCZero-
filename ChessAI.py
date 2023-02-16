@@ -13,7 +13,7 @@ screen = pygame.display.set_mode(WINDOW_SIZE)
 pygame.display.set_caption("Chess")
 
 # Set up the Chess engine
-engine = chess.engine.SimpleEngine.popen_uci("D:\Mine\Python Projects\AIchess\Leela Chess Zero (LCZero) engine\lc0.exe")
+engine = chess.engine.SimpleEngine.popen_uci("path\to\engine")
 
 # Set up the Chess board
 board = chess.Board()
